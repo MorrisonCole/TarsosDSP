@@ -36,7 +36,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.sound.sampled.AudioFileFormat;
-import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineUnavailableException;
@@ -44,7 +43,6 @@ import javax.sound.sampled.TargetDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 import be.hogent.tarsos.dsp.util.AudioFloatConverter;
-
 
 
 /**

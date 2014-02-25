@@ -28,7 +28,7 @@ package be.hogent.tarsos.dsp;
 
 import java.util.Arrays;
 
-import javax.sound.sampled.AudioFormat;
+import be.hogent.tarsos.dsp.AudioFormat;
 
 import be.hogent.tarsos.dsp.util.AudioFloatConverter;
 
@@ -134,6 +134,13 @@ public class AudioEvent {
 		}
 		converter.toByteArray(getFloatBuffer(), byteBuffer);
 		return byteBuffer;
+	}
+	
+	public void setFloatBufferWithShortBuffer(short[] shortBuffer) {
+		this.floatBuffer = new float[shortBuffer.length];
+		for (int i = 0; i < shortBuffer.length; i++) {
+			this.floatBuffer[i] = (float) shortBuffer[i] / 32768.0f; // signed 16 bit
+		}
 	}
 	
 	public void setFloatBuffer(float[] floatBuffer) {
