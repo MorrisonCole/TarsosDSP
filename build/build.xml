@@ -19,12 +19,12 @@
 	<target name="compile">
 		<mkdir dir="../bin" />
 		<javac srcdir="../src" destdir="../bin" includeantruntime="false" />
-		<javac srcdir="../examples" destdir="../bin" includeantruntime="false" />
+		<!--  <javac srcdir="../examples" destdir="../bin" includeantruntime="false" />-->
 
 		<!-- copy all needed resources to bin dir -->
-		<copy todir="../bin/be/hogent/tarsos/dsp/example/resources">
+		<!-- <copy todir="../bin/be/hogent/tarsos/dsp/example/resources">
 			<fileset dir="../examples/be/hogent/tarsos/dsp/example/resources" />
-		</copy>
+		</copy>-->
 	</target>
 	
 	<target name="compile-debug">
@@ -35,17 +35,17 @@
 			includeantruntime="false"
   			debuglevel="lines,vars,source"
   			destdir="../bin" />
-		<javac 
+		<!-- <javac 
 		    srcdir="../examples" 
 			includeantruntime="false"
 		    debug="true"
   			debuglevel="lines,vars,source"
-		    destdir="../bin" />
+		    destdir="../bin" />-->
 
 		<!-- copy all needed resources to bin dir -->
-		<copy todir="../bin/be/hogent/tarsos/dsp/example/resources">
+		<!-- <copy todir="../bin/be/hogent/tarsos/dsp/example/resources">
 			<fileset dir="../examples/be/hogent/tarsos/dsp/example/resources" />
-		</copy>
+		</copy>-->
 	</target>
 
 

@@ -143,6 +143,13 @@ public class AudioEvent {
 		}
 	}
 	
+	public void setFloatBufferWithByteBuffer(byte[] byteBuffer) {
+		System.out.println("frame size and length: " + format.getFrameSize() + " " + byteBuffer.length);
+		int length = (int)(byteBuffer.length / (float)(format.getFrameSize()));
+		this.floatBuffer = new float[length];
+		converter.toFloatArray(byteBuffer, this.floatBuffer);
+	}
+	
 	public void setFloatBuffer(float[] floatBuffer) {
 		this.floatBuffer = floatBuffer;
 	}
